@@ -5,14 +5,14 @@ const ProductSchema = mongoose.Schema({
         type:String,
         require:[true, "Enter the name"]
     },
-image1:{
+image:{
     type:String,
     required:true
 },
-image2:{
+oneimage:{
     type:String,
     required:true
-},image3:{
+},twoimage:{
     type:String
 },
 description:{
