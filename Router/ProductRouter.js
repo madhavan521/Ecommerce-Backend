@@ -4,9 +4,9 @@ const productrouters = express.Router()
 
 //Post Product data
 productrouters.post ('/productdata' ,async(req,res)=>{
-    const {name,image1,image2,image3,description,price,discount,features,stock,catagory}=req.body
+    const {name,image,oneimage,twoimage,description,price,discount,features,stock,catagory}=req.body
     try{
-       const newProduct = new product({name,image1,image2,image3,description,price,discount,features,stock,catagory})
+       const newProduct = new product({name,image,oneimage,twoimage,description,price,discount,features,stock,catagory})
     await newProduct.save() 
     res.status(200).send(newProduct) 
     }
